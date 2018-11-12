@@ -1,7 +1,9 @@
 package per.ljj.demo;
 
-import per.ljj.demo.ObserverLearn.Mother;
-import per.ljj.demo.ObserverLearn.Son;
+import per.ljj.demo.factoryLearn.Animal;
+import per.ljj.demo.factoryLearn.AnimalFactory;
+import per.ljj.demo.observerLearn.Mother;
+import per.ljj.demo.observerLearn.Son;
 
 /**
  * @version V1.0
@@ -10,11 +12,23 @@ import per.ljj.demo.ObserverLearn.Son;
  * @date: 2018/11/8 17:49
  */
 public class Test {
-    public static void main(String[] args) {
-        Mother mother = new Mother();
-        Son son = new Son();
 
-        mother.notifyToEatDinner("吃饭");
-//        测试下
+//test 观察者模式
+//    public static void main(String[] args) {
+//        Mother mother = new Mother();
+//        Son son = new Son();
+//
+//        mother.notifyToEatDinner("吃饭");
+//    }
+
+//test 工厂模式
+    public static void main(String[] args) {
+        Animal animal = AnimalFactory.getInstance("Cat");
+        if (animal != null) {
+            animal.eatFood();
+        } else {
+            System.err.println("We don't know this kind of animal");
+        }
     }
+
 }

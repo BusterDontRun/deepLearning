@@ -1,4 +1,4 @@
-package per.ljj.demo.ObserverLearn;
+package per.ljj.demo.observerLearn;
 
 /**
  * @version V1.0
