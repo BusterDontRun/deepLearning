@@ -15,5 +15,6 @@ public class Test {
         Son son = new Son();
 
         mother.notifyToEatDinner("吃饭");
+//        测试下
     }
 }
